@@ -1,0 +1,183 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #f4f4f4;
+}
+
+/* 시작화면 + 게임화면 공통 가운데 정렬 */
+#start-screen,
+#game-screen {
+  height: 100vh;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+/* 화면 보일 때만 flex 적용 */
+/* 시작화면 + 게임화면 공통 설정 */
+#start-screen,
+#game-screen {
+  height: 100vh;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+/* 화면 보일 때만 flex 적용 */
+#start-screen:not(.hidden),
+#game-screen:not(.hidden) {
+  display: flex;
+}
+
+.hidden {
+  display: none;
+}
+
+/* ---------------- 시작 화면 ---------------- */
+
+#start-screen {
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+#start-screen h1 {
+  font-size: 48px;   /* 게임 제목 크게 */
+  font-weight: bold;
+  margin: 0;
+}
+
+#nickname {
+  padding: 18px;
+  font-size: 24px;
+  width: 320px;
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+#start-btn {
+  padding: 18px 40px;
+  font-size: 24px;
+  border-radius: 10px;
+  border: none;
+  background: black;
+  color: white;
+  cursor: pointer;
+}
+
+/* ---------------- 게임 화면 ---------------- */
+
+#game-screen {
+  justify-content: space-between;
+}
+
+/* 상단 정보 */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  font-size: 22px;   /* 시간/점수 크게 */
+  font-weight: bold;
+}
+
+/* 문제 크게 */
+#question {
+  text-align: center;
+  font-size: 28px;
+  margin-top: 40px;
+  padding: 0 10px;
+}
+
+/* 보기 영역 */
+#options {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 50px;
+}
+
+/* 보기 카드 */
+.option-card {
+  background: white;
+  padding: 28px 20px;   /* 🔥 위아래 폭 크게 */
+  border-radius: 15px;
+  text-align: center;
+  font-size: 22px;      /* 보기 글자 크게 */
+  box-shadow: 0 5px 12px rgba(0,0,0,0.15);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.option-card:active {
+  transform: scale(0.97);
+}
+
+.correct {
+  background: #4CAF50;
+  color: white;
+}
+
+.wrong {
+  background: #f44336;
+  color: white;
+}
+
+/* ---------------- 종료 화면 ---------------- */
+
+#end-screen {
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 25px;
+}
+
+#end-screen h2 {
+  font-size: 48px;
+  margin: 0;
+}
+
+.final-score-text {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+#ranking-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  font-size: 22px;
+}
+
+#ranking-list li {
+  margin: 8px 0;
+}
+
+#restart-btn {
+  padding: 18px 40px;
+  font-size: 22px;
+  border-radius: 12px;
+  border: none;
+  background: black;
+  color: white;
+  cursor: pointer;
+}
+
+#ranking-btn {
+  padding: 18px 40px;
+  font-size: 22px;
+  border-radius: 10px;
+  border: none;
+  background: #444;
+  color: white;
+  cursor: pointer;
+}
+
+#music-toggle {
+  padding: 15px 30px;
+  font-size: 20px;
+  border-radius: 10px;
+  border: none;
+  background: #222;
+  color: white;
+}
